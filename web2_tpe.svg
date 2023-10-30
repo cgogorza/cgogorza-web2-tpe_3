@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="175 106 592 256"
+   width="417px"
+   height="150px"
+   version="1.1"
+   id="svg60"
+   sodipodi:docname="web2_tpe.svg"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)">
+  <metadata
+     id="metadata66">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs64" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     id="namedview62"
+     showgrid="false"
+     inkscape:zoom="2.4388489"
+     inkscape:cx="208.5"
+     inkscape:cy="75"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg60" />
+  <line
+     x1="293"
+     y1="231"
+     x2="303"
+     y2="231"
+     style="stroke:#c00;stroke-width:1;"
+     id="line2" />
+  <line
+     x1="486"
+     y1="159"
+     x2="496"
+     y2="159"
+     style="stroke:#c00;stroke-width:1;"
+     id="line4" />
+  <line
+     x1="303"
+     y1="231"
+     x2="486"
+     y2="159"
+     style="stroke:#c00;stroke-width:1;"
+     id="line6" />
+  <line
+     x1="300.5"
+     y1="231"
+     x2="296.96446609407"
+     y2="234.53553390593"
+     style="stroke:#c00;stroke-width:2;"
+     id="line8" />
+  <line
+     x1="300.5"
+     y1="231"
+     x2="296.96446609407"
+     y2="227.46446609407"
+     style="stroke:#c00;stroke-width:2;"
+     id="line10" />
+  <line
+     x1="491"
+     y1="159"
+     x2="487.46446609407"
+     y2="162.53553390593"
+     style="stroke:#c00;stroke-width:2;"
+     id="line12" />
+  <line
+     x1="491"
+     y1="159"
+     x2="487.46446609407"
+     y2="155.46446609407"
+     style="stroke:#c00;stroke-width:2;"
+     id="line14" />
+  <rect
+     width="103"
+     height="20"
+     x="190"
+     y="121"
+     style="fill:#007;stroke:black;"
+     id="rect16" />
+  <text
+     width="103"
+     height="20"
+     x="195"
+     y="135"
+     style="fill:#fff;"
+     font-family="Arial"
+     font-size="16px"
+     id="text18"> inscripciones</text>
+  <rect
+     width="103"
+     height="20"
+     x="190"
+     y="141"
+     style="fill:#aea;stroke:black;"
+     id="rect20" />
+  <text
+     width="103"
+     height="20"
+     x="195"
+     y="155"
+     style="fill:black;"
+     font-family="Arial"
+     font-size="16px"
+     id="text22">inscripcion_id</text>
+  <rect
+     width="103"
+     height="20"
+     x="190"
+     y="161"
+     style="fill:none;stroke:black;"
+     id="rect24" />
+  <text
+     width="103"
+     height="20"
+     x="195"
+     y="175"
+     style="fill:black;"
+     font-family="Arial"
+     font-size="16px"
+     id="text26">nombre</text>
+  <rect
+     width="103"
+     height="20"
+     x="190"
+     y="181"
+     style="fill:none;stroke:black;"
+     id="rect28" />
+  <text
+     width="103"
+     height="20"
+     x="195"
+     y="195"
+     style="fill:black;"
+     font-family="Arial"
+     font-size="16px"
+     id="text30">email</text>
+  <rect
+     width="103"
+     height="20"
+     x="190"
+     y="201"
+     style="fill:none;stroke:black;"
+     id="rect32" />
+  <text
+     width="103"
+     height="20"
+     x="195"
+     y="215"
+     style="fill:black;"
+     font-family="Arial"
+     font-size="16px"
+     id="text34">objetivo</text>
+  <rect
+     width="103"
+     height="20"
+     x="190"
+     y="221"
+     style="fill:none;stroke:black;"
+     id="rect36" />
+  <text
+     width="103"
+     height="20"
+     x="195"
+     y="235"
+     style="fill:black;"
+     font-family="Arial"
+     font-size="16px"
+     id="text38">materia_id</text>
+  <rect
+     width="81"
+     height="20"
+     x="496"
+     y="129"
+     style="fill:#007;stroke:black;"
+     id="rect40" />
+  <text
+     width="81"
+     height="20"
+     x="501"
+     y="143"
+     style="fill:#fff;"
+     font-family="Arial"
+     font-size="16px"
+     id="text42"> materias</text>
+  <rect
+     width="81"
+     height="20"
+     x="496"
+     y="149"
+     style="fill:#aea;stroke:black;"
+     id="rect44" />
+  <text
+     width="81"
+     height="20"
+     x="501"
+     y="163"
+     style="fill:black;"
+     font-family="Arial"
+     font-size="16px"
+     id="text46">materia_id</text>
+  <rect
+     width="81"
+     height="20"
+     x="496"
+     y="169"
+     style="fill:none;stroke:black;"
+     id="rect48" />
+  <text
+     width="81"
+     height="20"
+     x="501"
+     y="183"
+     style="fill:black;"
+     font-family="Arial"
+     font-size="16px"
+     id="text50">materia</text>
+  <rect
+     width="81"
+     height="20"
+     x="496"
+     y="189"
+     style="fill:none;stroke:black;"
+     id="rect52" />
+  <text
+     width="81"
+     height="20"
+     x="501"
+     y="203"
+     style="fill:black;"
+     font-family="Arial"
+     font-size="16px"
+     id="text54">profesor</text>
+  <rect
+     width="81"
+     height="20"
+     x="496"
+     y="209"
+     style="fill:none;stroke:black;"
+     id="rect56" />
+  <text
+     width="81"
+     height="20"
+     x="501"
+     y="223"
+     style="fill:black;"
+     font-family="Arial"
+     font-size="16px"
+     id="text58">horario</text>
+</svg>
