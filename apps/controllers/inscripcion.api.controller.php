@@ -8,7 +8,7 @@ class InscripcionApiController extends APIController{
 
     private $model;
    
-    function __contruct(){
+    function __construct(){
         parent::__construct();
         $this->model = new InscripcionModel();
     }
@@ -51,9 +51,9 @@ class InscripcionApiController extends APIController{
 
     public function delete($params = []) {
          $inscripcion_id = $params[':ID'];
-         $inscripcion = $this->model->getTask($inscripcion_id);
+         $inscripcion = $this->model->getInscripcionbyId($inscripcion_id);
          if ($inscripcion) {
-            $this->model->deleteTask($inscripcion_id);
+            $this->model->deleteInscripcion($inscripcion_id);
             $this->view->response('Inscripción_id= ' .$inscripcion_id. ' fue eliminada con éxito', 200);
         }
             else
@@ -75,7 +75,7 @@ class InscripcionApiController extends APIController{
 
     public function update($params = []) {
         $inscripcion_id = $params[':ID'];
-        $inscripcion = $this->model->getInscripcion($inscripcion_id);
+        $inscripcion = $this->model->getInscripcionbyId($inscripcion_id);
             if ($inscripcion) {
                 $body = $this->getData();
 
