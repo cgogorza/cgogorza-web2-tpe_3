@@ -26,25 +26,27 @@ class InscripcionApiController extends APIController{
         else{
             $inscripcion = $this->model->getInscripcionbyId($params[":ID"]);
             if(!empty($inscripcion)) {
-                if($params[':subrecurso']){
-                    switch ($params[':subrecurso']){
-                        case 'nombre':
-                            $this->view->response ($inscripcion->nombre, 200);
-                            break;
-                        case 'objetivo':
-                            $this->view->response ($inscripcion->objetivo, 200);
-                            break;
-                        default:
-                        $this->view->response(
-                            'La tarea no contiene ' .$params[':subrecurso']. '.'
-                            , 404);
+                if (isset ($params[':subrecurso'])){
+                    if($params[':subrecurso']){
+                        switch ($params[':subrecurso']){
+                            case 'nombre':
+                                $this->view->response ($inscripcion->nombre, 200);
+                                break;
+                            case 'objetivo':
+                                $this->view->response ($inscripcion->objetivo, 200);
+                                break;
+                            default:
+                            $this->view->response(
+                                'La inscripción  no contiene ' .$params[':subrecurso']. '.'
+                                , 404);
                             break;
                     }
                 }
-              return $this->view->response($inscripcion,200);
-            }
-        else{
-            return $this->view->response([],404);
+                } else
+                    $this->view->response($inscripcion,200);
+            } else {
+                return $this->view->response(
+                    'La inscripción con el id= '.$params[':ID']. ' no existe.',404);
             }
         }
     }
