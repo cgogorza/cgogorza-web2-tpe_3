@@ -11,7 +11,7 @@ $router->addRoute('inscripciones', 'POST', 'InscripcionApiController', 'create')
 $router->addRoute('inscripciones/:ID', 'GET', 'InscripcionApiController', 'get');
 $router->addRoute('inscripciones/:ID', 'PUT', 'InscripcionApiController', 'update');
 $router->addRoute('inscripciones/:ID', 'DELETE', 'InscripcionApiController', 'delete');
+$router->addRoute('inscripciones/:ID/:subrecurso', 'GET', 'InscripcionApiController', 'get');
 
-$router->addRoute('inscripciones/:ID/nombre', 'GET', 'InscripcionApiController', 'get');
 // Se rutea
 $router->route($_GET["resource"], $_SERVER['REQUEST_METHOD']);

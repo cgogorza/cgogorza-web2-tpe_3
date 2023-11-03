@@ -26,6 +26,21 @@ class InscripcionApiController extends APIController{
         else{
             $inscripcion = $this->model->getInscripcionbyId($params[":ID"]);
             if(!empty($inscripcion)) {
+                if($params[':subrecurso']){
+                    switch ($params[':subrecurso']){
+                        case 'nombre':
+                            $this->view->response ($inscripcion->nombre, 200);
+                            break;
+                        case 'objetivo':
+                            $this->view->response ($inscripcion->objetivo, 200);
+                            break;
+                        default:
+                        $this->view->response(
+                            'La tarea no contiene ' .$params[':subrecurso']. '.'
+                            , 404);
+                            break;
+                    }
+                }
               return $this->view->response($inscripcion,200);
             }
         else{
