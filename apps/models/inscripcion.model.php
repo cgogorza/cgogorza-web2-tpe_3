@@ -22,7 +22,7 @@ class InscripcionModel {
         $query = $this->db->prepare('SELECT * FROM inscripciones WHERE inscripcion_id = ?');
         $query->execute([$id]);
         
-        return  $query->fetchAll(PDO::FETCH_OBJ);
+        return  $query->fetch(PDO::FETCH_OBJ);
     }
 
     function getMaterias() {

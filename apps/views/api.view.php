@@ -1,7 +1,7 @@
 <?php
 
-require_once 'libs/router.php';
-require_once 'apps/controllers/inscripcion.api.controller.php';
+require_once './libs/router.php';
+require_once './apps/controllers/inscripcion.api.controller.php';
 
 class APIView{
 
