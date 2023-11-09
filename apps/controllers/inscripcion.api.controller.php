@@ -86,7 +86,7 @@ class InscripcionApiController extends APIController{
                 $objetivo = $body->objetivo;
                 $materia_id= $body->materia_id;
                 
-                $this->model->insertInscripcion($nombre, $email, $objetivo, $materia_id);
+                $this->model->updateInscripcion($nombre, $email, $objetivo, $materia_id, $inscripcion_id);
                 $this->view->response('La inscripción con id= ' .$inscripcion_id.' ha sido modificada con éxito', 200);
             } else
                 $this->view->response('La inscripción con id= ' .$inscripcion_id. ' no fue encontrada', 404);
