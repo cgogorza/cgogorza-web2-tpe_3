@@ -8,14 +8,22 @@ class InscripcionModel {
         $this->db = new PDO("mysql:host=".HOST.";dbname=".DBNAME.";charset=utf8", 'root', '');
     }
     
-    function getInscripciones() {
-        $query = $this->db->prepare('SELECT * FROM inscripciones');
+    function getInscripciones($orderBy, $sort) {
+        if ($orderBy && $sort){
+            $query = $this->db->prepare("SELECT inscripcion_id, nombre, email, objetivo, materia_id 
+                        FROM inscripciones ORDER BY $sort $orderBy ");
+        }
+        else {
+            $query = $this->db->prepare("SELECT inscripcion_id, nombre, email, objetivo, materia_id 
+            FROM inscripciones ");
+            
+        }
         $query->execute();
+            return $query->fetchAll(PDO::FETCH_OBJ);
+        
+           
+        }
 
-        $inscripciones = $query->fetchAll(PDO::FETCH_OBJ);
-
-        return $inscripciones;
-    }
 
     function getInscripcionbyId($id) {
 
@@ -64,5 +72,5 @@ class InscripcionModel {
         $query->execute([$nombre, $email, $objetivo, $materia_id, $id]);
         return $query;
     }
-
 }
+

@@ -13,44 +13,33 @@ class InscripcionApiController extends APIController{
         $this->model = new InscripcionModel();
     }
 
-    public function getAll(){
-        $inscripciones = $this->model->getInscripciones();
-        $this->view->response($inscripciones, 200);
+        public function getAll(){
+        if (isset($_GET['orderBy']) && isset($_GET['sort'])){ 
+            $orderBy = $_GET['orderBy'];
+            $sort= $_GET['sort'];
+
+        $inscripciones = $this->model->getInscripciones($orderBy, $sort);
+        $this->view->response($inscripciones, 200);  
+        }
+        else {  
+        $inscripciones = $this->model->getInscripciones(null, null);
+        $this->view->response($inscripciones, 200); 
+
+        }
+                 
     }
 
-    public function get($params = []){
-        if (empty ($params)){
-            $inscripciones = $this->model->getInscripciones();
-            $this->view->response($inscripciones, 200);
-        }
-        else{
-            $inscripcion = $this->model->getInscripcionbyId($params[":ID"]);
-            if(!empty($inscripcion)) {
-                if (isset ($params[':subrecurso'])){
-                    if($params[':subrecurso']){
-                        switch ($params[':subrecurso']){
-                            case 'nombre':
-                                $this->view->response ($inscripcion->nombre, 200);
-                                break;
-                            case 'objetivo':
-                                $this->view->response ($inscripcion->objetivo, 200);
-                                break;
-                            default:
-                            $this->view->response(
-                                'La inscripción  no contiene ' .$params[':subrecurso']. '.'
-                                , 404);
-                            break;
-                    }
-                }
-                } else
-                    $this->view->response($inscripcion,200);
-            } else {
-                return $this->view->response(
-                    'La inscripción con el id= '.$params[':ID']. ' no existe.',404);
-            }
-        }
-    }
+    public function getById($params = []) {
+        $inscripcion_id = $params[':ID'];
+        $inscripcion = $this->model->getInscripcionbyId($inscripcion_id);
+        if ($inscripcion) {
+           $this->view->response($inscripcion,200);
+       }
+           else
+           $this->view->response('Inscripcion_id= ' .$inscripcion_id. ' no fue encontrada', 404);
+       }
 
+    
     public function delete($params = []) {
          $inscripcion_id = $params[':ID'];
          $inscripcion = $this->model->getInscripcionbyId($inscripcion_id);
@@ -91,4 +80,5 @@ class InscripcionApiController extends APIController{
             } else
                 $this->view->response('La inscripción con id= ' .$inscripcion_id. ' no fue encontrada', 404);
     }   
+
 }
