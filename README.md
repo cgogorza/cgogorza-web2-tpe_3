@@ -23,3 +23,6 @@ A continuación se enumeran los diferentes endpoints con los que se acceden a la
 3) Para ordenar la presentación se utiliza el siguiente endpoint. En primer lugar, se determina cual es el parámetro que ordena **(?sort=)**. Abajo se ve como quedaría eligiendo
    el número de la inscripción, pero puede ordenarse usando cualquiera de los atributos de la base de datos. Posteriormente, se elije el orden que se desea. Puede ser ascendente (asc, como se puso abajo) o también (desc, descendente):
    > localhost/web2/TPE_Tercera_Entrega/api/inscripciones/?sort=inscripcion_id&orderBy=asc
+
+4) Para cambiar una inscripción se modifica alguno o todos de los siguientes espacios en formato de JSON:
+   
