@@ -2,7 +2,10 @@
 
 require_once './apps/views/api.view.php';
 
+
+
 abstract Class ApiController{
+
     protected $view;
     private $data;
 
@@ -13,5 +16,7 @@ abstract Class ApiController{
     function getData(){      
         return json_decode($this->data);
     }
+
+
 }
 

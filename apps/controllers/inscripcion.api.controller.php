@@ -2,15 +2,18 @@
 
 require_once './apps/models/inscripcion.model.php';
 require_once './apps/controllers/api.controller.php';
-
+require_once './apps/helpers/auth-api.helper.php';
 
 class InscripcionApiController extends APIController{
 
     private $model;
-   
+    private $authHelper;
+
+
     function __construct(){
         parent::__construct();
         $this->model = new InscripcionModel();
+        $this->authHelper = new AuthApiHelper();
     }
 
         public function getAll(){
@@ -44,6 +47,11 @@ class InscripcionApiController extends APIController{
 
     
     public function delete($params = []) {
+        if(!$this->authHelper->isLoggedIn()){
+            $this->view->response("No estas logeado", 401);
+            return;
+        }
+
          $inscripcion_id = $params[':ID'];
          $inscripcion = $this->model->getInscripcionbyId($inscripcion_id);
          if ($inscripcion) {
@@ -55,6 +63,11 @@ class InscripcionApiController extends APIController{
         }
 
     public function create($params = []){
+        if(!$this->authHelper->isLoggedIn()){
+            $this->view->response("No estas logeado", 401);
+            return;
+        }
+
         $body = $this->getData();
 
         $nombre = $body->nombre;
@@ -68,6 +81,11 @@ class InscripcionApiController extends APIController{
     }
 
     public function update($params = []) {
+        if(!$this->authHelper->isLoggedIn()){
+            $this->view->response("No estas logeado", 401);
+            return;
+        }
+
         $inscripcion_id = $params[':ID'];
         $inscripcion = $this->model->getInscripcionbyId($inscripcion_id);
             if ($inscripcion) {
