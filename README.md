@@ -61,7 +61,7 @@ Se utiliza el comando *DELETE*. Si la inscripción fue borrada correctamente se 
           "objetivo": "",  
           "materia_id": ,
 
-Se utiliza el comando *CREATE*. Si la inscripción fue creada correctamente se recibirá un mensaje (Status 200 OK):  
+Se utiliza el comando *POST*. Si la inscripción fue creada correctamente se recibirá un mensaje (Status 200 OK):  
 
          "La tarea fue insertada con el id = 45"
 
