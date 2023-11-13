@@ -8,15 +8,14 @@ class InscripcionModel {
         $this->db = new PDO("mysql:host=".HOST.";dbname=".DBNAME.";charset=utf8", 'root', '');
     }
     
-    
-    function getInscripciones($orderBy, $sort) {
+
+    function getInscripciones($orderBy, $sort, $page = 1, $limit = 9999999) {
+        $start = ($page - 1) * $limit; //Calculo el inicio de la página
         if ($orderBy && $sort){
-            $query = $this->db->prepare("SELECT inscripcion_id, nombre, email, objetivo, materia_id 
-                        FROM inscripciones ORDER BY $sort $orderBy ");
+            $query = $this->db->prepare("SELECT * FROM inscripciones ORDER BY $sort $orderBy LIMIT $start, $limit");
         }
         else {
-            $query = $this->db->prepare("SELECT inscripcion_id, nombre, email, objetivo, materia_id 
-            FROM inscripciones ");
+            $query = $this->db->prepare("SELECT * FROM inscripciones ");
             
         }
         $query->execute();

@@ -18,12 +18,15 @@ class InscripcionApiController extends APIController{
             $orderBy = $_GET['orderBy'];
             $sort= $_GET['sort'];
 
-        $inscripciones = $this->model->getInscripciones($orderBy, $sort);
-        $this->view->response($inscripciones, 200);  
+            $page = isset($_GET['_page']) ? (int)$_GET['_page'] : 1; // Página predeterminada: 1
+            $limit = isset($_GET['_limit']) ? (int)$_GET['_limit'] : 10; // Límite predeterminado: 10
+    
+            $inscripciones = $this->model->getInscripciones($orderBy, $sort, $page, $limit);
+            $this->view->response($inscripciones, 200);  
         }
         else {  
-        $inscripciones = $this->model->getInscripciones(null, null);
-        $this->view->response($inscripciones, 200); 
+            $inscripciones = $this->model->getInscripciones(null, null);
+            $this->view->response($inscripciones, 200); 
 
         }
                  
