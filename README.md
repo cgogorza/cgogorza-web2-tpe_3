@@ -3,7 +3,7 @@
 # Trabajo: Búsqueda de compañero de estudio
 (proyecto en desarrollo)
 
-   ## Autores: Claudia Gogorza y Franco Almenta
+   ## Autores: Claudia Gogorza y Franco Almenta.
 
 ##  Datos de Contacto:  ##
 Claudia Gogorza (DNI: 17468843)  
