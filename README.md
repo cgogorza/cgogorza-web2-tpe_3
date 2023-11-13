@@ -25,4 +25,14 @@ A continuación se enumeran los diferentes endpoints con los que se acceden a la
    > localhost/web2/TPE_Tercera_Entrega/api/inscripciones/?sort=inscripcion_id&orderBy=asc
 
 4) Para cambiar una inscripción se modifica alguno o todos de los siguientes espacios en formato de JSON:
-   
+   > "inscripcion_id": 21,
+   > "nombre": "Marcelo Leali",  
+   > "email": "marceloleali@gmail.com",  
+   > "objetivo": "Final",  
+   > "materia_id": 5,
+
+   Se utiliza el comando *PUT*. Si el cambio fue realizado correctamente se recibirá un mensaje (Status 200 OK):
+   > "La inscripción con id= 21 ha sido modificada con éxito"
+
+5) 
+
