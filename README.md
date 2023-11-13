@@ -17,22 +17,29 @@ A continuación se enumeran los diferentes endpoints con los que se acceden a la
 1) El endpoint que se debe utilizar para poder visualizar la lista de **Inscripciones** es:  
    > localhost/web2/TPE_Tercera_Entrega/api/inscripciones
 
+Se utiliza el comando *GET*. Si los datos se obtuvieron correctamente se recibirá un mensaje (Status 200 OK).
+
 2) Con el objetivo de visualizar una inscripción en particular se debe determinar el número de id
    de la inscrioción correspondiente, que se determina en el atributo inscripcion_id. De esta manera, el endpoint correspondiente a la inscripción n° 15, quedaría escrito como:
    > localhost/web2/TPE_Tercera_Entrega/api/inscripciones/15
-3) Para ordenar la presentación se utiliza el siguiente endpoint. En primer lugar, se determina cual es el parámetro que ordena **(?sort=)**. Abajo se ve como quedaría eligiendo
+   
+Se utiliza el comando GET. Si los datos se recibieron correctamente se recibirá un mensaje (Status 200 OK).
+    
+4) Para ordenar la presentación se utiliza el siguiente endpoint. En primer lugar, se determina cual es el parámetro que ordena **(?sort=)**. Abajo se ve como quedaría eligiendo
    el número de la inscripción, pero puede ordenarse usando cualquiera de los atributos de la base de datos. Posteriormente, se elije el orden que se desea. Puede ser ascendente (asc, como se puso abajo) o también (desc, descendente):
    > localhost/web2/TPE_Tercera_Entrega/api/inscripciones/?sort=inscripcion_id&orderBy=asc
+   
+Se utiliza el comando GET y los Query Params: sort y orderBy. Si los datos se obtuvieron correctamente se recibirá un mensaje (Status 200 OK). 
 
-4) Para cambiar una inscripción se modifica alguno o todos de los siguientes espacios en formato de JSON:
+5) Para cambiar una inscripción se modifica alguno o todos de los siguientes espacios en formato de JSON:
    > "inscripcion_id": 21,
    > "nombre": "Marcelo Leali",  
    > "email": "marceloleali@gmail.com",  
    > "objetivo": "Final",  
    > "materia_id": 5,
 
-   Se utiliza el comando *PUT*. Si el cambio fue realizado correctamente se recibirá un mensaje (Status 200 OK):
+Se utiliza el comando *PUT*. Si el cambio fue realizado correctamente se recibirá un mensaje (Status 200 OK):
    > "La inscripción con id= 21 ha sido modificada con éxito"
 
-5) 
+6) 
 
