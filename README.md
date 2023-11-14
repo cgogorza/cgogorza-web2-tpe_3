@@ -46,7 +46,7 @@ Se utiliza el comando *PUT*. Si el cambio fue realizado correctamente se recibir
           "La inscripción con id= 21 ha sido modificada con éxito"
 
 5) Con el objetivo de borrar una inscripción en particular se debe determinar el número de id de la inscrioción correspondiente,
-que se determina en el atributo inscripcion_id. Se utiliza el comando *DELETE*.
+que se determina en el atributo inscripcion_id. Se utiliza el comando *DELETE*.  
 Previamente a ejecutar un delete se debe loggear. Para esto se debe ingresar un user: Claudia y el password: 1234 en Basic Auth,
 el endpoint correspondiente es:
 
@@ -57,7 +57,7 @@ Luego de logearse, el endpoint correspondiente para borrar la inscripción n° 2
 
    > localhost/web2/TPE_Tercera_Entrega/api/inscripciones/21
 
-Se utiliza el comando *DELETE*. Si la inscripción fue borrada correctamente se recibirá un mensaje (Status 200 OK): 
+Si la inscripción fue borrada correctamente se recibirá un mensaje (Status 200 OK): 
 
          "Inscripción_id= 21 fue eliminada con éxito"
 
