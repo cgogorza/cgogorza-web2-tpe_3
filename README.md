@@ -27,13 +27,13 @@ Se utiliza el comando *GET*. Si los datos se obtuvieron correctamente se recibir
    
 Se utiliza el comando GET. Si los datos se recibieron correctamente se recibirá un mensaje (Status 200 OK).
     
-4) Para ordenar la presentación se utiliza el siguiente endpoint. En primer lugar, se determina cual es el parámetro que ordena **(?sort=)**. Abajo se ve como quedaría eligiendo el número de la inscripción, pero puede ordenarse usando cualquiera de los atributos de la base de datos. Posteriormente, se elije el orden que se desea **(orderBy)**. Puede ser ascendente (asc, como se puso abajo) o también (desc, descendente). Por otra parte, para paginar se debe informar el número de página inicial y final. En el ejemplo se indico mostrar desde página 1 a 3.
+3) Para ordenar la presentación se utiliza el siguiente endpoint. En primer lugar, se determina cual es el parámetro que ordena **(?sort=)**. Abajo se ve como quedaría eligiendo el número de la inscripción, pero puede ordenarse usando cualquiera de los atributos de la base de datos. Posteriormente, se elije el orden que se desea **(orderBy)**. Puede ser ascendente (asc, como se puso abajo) o también (desc, descendente). Por otra parte, para paginar se debe informar el número de página inicial y final. En el ejemplo se indico mostrar desde página 1 a 3.
 
    > localhost/web2/TPE_Tercera_Entrega/api/inscripciones?sort=inscripcion_id&orderBy=asc&_page=1&_limit=3
    
 Se utiliza el comando GET y los Query Params: sort y orderBy. Si los datos se obtuvieron correctamente se recibirá un mensaje (Status 200 OK). 
 
-5) Para cambiar una inscripción se modifica alguno o todos de los siguientes espacios en formato de JSON en el body de Postman:
+4) Para cambiar una inscripción se modifica alguno o todos de los siguientes espacios en formato de JSON en el body de Postman:
 
           "inscripcion_id": 21,
           "nombre": "Marcelo Leali",  
@@ -45,7 +45,15 @@ Se utiliza el comando *PUT*. Si el cambio fue realizado correctamente se recibir
   
           "La inscripción con id= 21 ha sido modificada con éxito"
 
-6) Con el objetivo de borrar una inscripción en particular se debe determinar el número de id de la inscrioción correspondiente, que se determina en el atributo inscripcion_id. De esta manera, el endpoint correspondiente a la inscripción n° 21, quedaría escrito como:  
+5) Con el objetivo de borrar una inscripción en particular se debe determinar el número de id de la inscrioción correspondiente,
+que se determina en el atributo inscripcion_id. Se utiliza el comando *DELETE*.
+Previamente a ejecutar un delete se debe loggear. Para esto se debe ingresar un user: Claudia y el password: 1234 en Basic Auth,
+el endpoint correspondiente es:
+
+   > localhost/web2/TPE_Tercera_Entrega/api/auth/token
+   
+Posteriormente, utilizando la función GET se obtiene un token que se debe ingresar en Bearer Token. Así estará logeado.  
+Luego de logearse, el endpoint correspondiente para borrar la inscripción n° 21, quedaría escrito como:  
 
    > localhost/web2/TPE_Tercera_Entrega/api/inscripciones/21
 
@@ -53,7 +61,7 @@ Se utiliza el comando *DELETE*. Si la inscripción fue borrada correctamente se 
 
          "Inscripción_id= 21 fue eliminada con éxito"
 
-7) Para crear una inscripción se completan los siguientes espacios en el body de Postman:  
+6) Para crear una inscripción se completan los siguientes espacios en el body de Postman:  
 
           "nombre": "",  
           "email": "",  
