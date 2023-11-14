@@ -31,9 +31,9 @@ Se utiliza el comando GET. Si los datos se recibieron correctamente se recibirá
 
    > localhost/web2/TPE_Tercera_Entrega/api/inscripciones?sort=inscripcion_id&orderBy=asc&_page=1&_limit=3
    
-Se utiliza el comando GET y los Query Params: sort y orderBy. Si los datos se obtuvieron correctamente se recibirá un mensaje (Status 200 OK). 
+Se utiliza el comando GET y los Query Params: sort orderBy, page y limit. Si los datos se obtuvieron correctamente se recibirá un mensaje (Status 200 OK). 
 
-4) Para cambiar una inscripción se modifica alguno o todos de los siguientes espacios en formato de JSON en el body de Postman:
+4) Para cambiar una inscripción se modifica alguno o todos de los siguientes espacios en el body de Postman:
 
           "inscripcion_id": 21,
           "nombre": "Marcelo Leali",  
