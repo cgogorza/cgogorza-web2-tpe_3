@@ -30,21 +30,22 @@ class AuthApiController {
 
     public function getToken($params = null) {
        
-        $basic = $this->authHelper->getAuthHeader();
+        $basic = $this->authHelper->getAuthHeader(); //Debe darnos el header "Authorization"
+                                                     //'Basic: base64(usuario y contraseña)'
         
         if(empty($basic)){
             $this->view->response('No autorizado', 401);
             return;
         }
-        $basic = explode(" ",$basic); 
+        $basic = explode(" ",$basic);  //["Basic", "base64(usuario y contraseña)"]
         if($basic[0]!="Basic"){
             $this->view->response('La autenticación debe ser Basic', 401);
             return;
         }
 
         
-        $userpass = base64_decode($basic[1]); 
-        $userpass = explode(":", $userpass);
+        $userpass = base64_decode($basic[1]); //usuario y contraseña
+        $userpass = explode(":", $userpass); //["usuario", "contraseña"]
         $user = $userpass[0];
         $pass = $userpass[1];
         if($user == "Claudia" && $pass == "1234"){
@@ -60,10 +61,11 @@ class AuthApiController {
             );
             $header = base64url_encode(json_encode($header));
             $payload = base64url_encode(json_encode($payload));
-            $signature = hash_hmac('SHA256', "$header.$payload", "Clave1234", true);
+            $signature = hash_hmac('SHA256', "$header.$payload", "Clave1234", true); //firma
             $signature = base64url_encode($signature);
             $token = "$header.$payload.$signature";
-             $this->view->response($token, 400);
+
+            $this->view->response($token, 400);
         }else{
             $this->view->response('No autorizado', 401);
         }
